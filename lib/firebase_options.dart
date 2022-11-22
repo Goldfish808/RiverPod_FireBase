@@ -47,29 +47,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDGWVU6-oOnOLE_2nVjelRf0DrHudzlffc',
-    appId: '1:215663281164:web:4c05836152a1135cfd1a29',
-    messagingSenderId: '215663281164',
-    projectId: 'riverpod-firestore-stream1',
-    authDomain: 'riverpod-firestore-stream1.firebaseapp.com',
-    storageBucket: 'riverpod-firestore-stream1.appspot.com',
+    apiKey: 'AIzaSyBdcOG2GY7MJWSIGWN-ZUFp8jwJ1VJ0PcU',
+    appId: '1:371047090151:web:d391989a69dfe529119f42',
+    messagingSenderId: '371047090151',
+    projectId: 'riverpod-firestore-strea-6926b',
+    authDomain: 'riverpod-firestore-strea-6926b.firebaseapp.com',
+    storageBucket: 'riverpod-firestore-strea-6926b.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC5Pf5oMUisZqXVe9_iqgG5aBvUj3V7cRc',
-    appId: '1:215663281164:android:53f6553f12cc7ebafd1a29',
-    messagingSenderId: '215663281164',
-    projectId: 'riverpod-firestore-stream1',
-    storageBucket: 'riverpod-firestore-stream1.appspot.com',
+    apiKey: 'AIzaSyCgad3DFQ4VXoxl90busqMV9-7QbWeTAbk',
+    appId: '1:371047090151:android:7379c07e6330d60e119f42',
+    messagingSenderId: '371047090151',
+    projectId: 'riverpod-firestore-strea-6926b',
+    storageBucket: 'riverpod-firestore-strea-6926b.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA9EHtWIbuBjIgGFwo33f6Va_uERsjXq2M',
-    appId: '1:215663281164:ios:11480aabf80ff6ddfd1a29',
-    messagingSenderId: '215663281164',
-    projectId: 'riverpod-firestore-stream1',
-    storageBucket: 'riverpod-firestore-stream1.appspot.com',
-    iosClientId: '215663281164-3hualhirs0hup40n02v7e9tkkp8tnjeo.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDfdSH37CLxhMygcMXUveihrUuR3zOmyCc',
+    appId: '1:371047090151:ios:368e0f17a2162a4e119f42',
+    messagingSenderId: '371047090151',
+    projectId: 'riverpod-firestore-strea-6926b',
+    storageBucket: 'riverpod-firestore-strea-6926b.appspot.com',
+    iosClientId: '371047090151-0ni6apapjlo3aef82jirgvjunduhem04.apps.googleusercontent.com',
     iosBundleId: 'shop.mtcoding.riverpodFirestoreSteam1',
   );
 }
