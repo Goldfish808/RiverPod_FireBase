@@ -5,6 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_firestore_steam1/contoller/chat_controller.dart';
 import 'package:riverpod_firestore_steam1/dto/chat/chat_req_dto.dart';
 
+import '../../../domain/chat/chat_firestore_repository.dart';
+
 class ChatRoomPage extends ConsumerWidget {
   const ChatRoomPage({Key? key}) : super(key: key);
 
@@ -14,7 +16,7 @@ class ChatRoomPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: _buildAppBar(),
-      body: _buildListView(),
+      body: _buildListView(ref),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Random random = Random();
@@ -30,14 +32,27 @@ class ChatRoomPage extends ConsumerWidget {
     );
   }
 
-  Widget _buildListView() {
-    return ListView.separated(
-      itemCount: 2,
-      itemBuilder: (context, index) => ListTile(
-        title: Text("msg : 안녕?"),
-        subtitle: Text("from : ssar"),
-      ),
-      separatorBuilder: (context, index) => Divider(),
+  Widget _buildListView(WidgetRef ref) {
+    final chatStream = ref.watch(chatStreamProvider);
+    return chatStream.when(
+      data: (chats) {
+        if (chats.isNotEmpty) {
+          return ListView.separated(
+            itemCount: chats.length,
+            itemBuilder: (context, index) => ListTile(
+              title: Text("msg : ${chats[index].msg}"),
+              subtitle: Text("from : ${chats[index].from}"),
+            ),
+            separatorBuilder: (context, index) => Divider(),
+          );
+        } else {
+          return Center(
+            child: Text("채팅 내역 없음"),
+          );
+        }
+      },
+      error: (error, stackTrace) => CircularProgressIndicator(),
+      loading: () => CircularProgressIndicator(),
     );
   }
 
